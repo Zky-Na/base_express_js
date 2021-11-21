@@ -50,7 +50,7 @@ bot.onText(/\/Date/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
-        `Now ${time};`
+        `Now ${msg.time};`
     );
 });
 
