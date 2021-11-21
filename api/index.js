@@ -13,7 +13,7 @@ let global_msg_id;
 bot.onText(/\/Start/, (msg) => {
     bot.sendMessage(msg.chat.id, `Welcome, ${msg.chat.first_name}`, {
     "reply_markup": {
-      "keyboard":[["/Assalamualaikum"],["/Cuaca Hari Ini"]]
+      "keyboard":[["/Assalamualaikum"],["/Cuaca"]]
       }
     });
 });
