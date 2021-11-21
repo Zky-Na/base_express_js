@@ -10,20 +10,20 @@ const bot = new TelegramBot(token, {polling: true});
 
 let global_msg_id;
 // Main Menu Bot
-InlineKeyboardMarkup inlineKeyboard = new(new []
-    {
-        // first row
-        new []
-        {
-            InlineKeyboardButton.WithCallbackData(text: "/Date", callbackData: "${msg.date}")
-        },
-    });
+
 bot.onText(/\/Start/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
         `hello ${msg.chat.first_name}, welcome...\n`
-        replyMarkup: inlineKeyboard
+    );
+});
+
+bot.onText(/\/Date/, (msg) => {
+    global_msg_id = msg.chat.id;
+    bot.sendMessage(
+        global_msg_id,
+        `Now ${msg.chat.first_name}`
     );
 });
 
