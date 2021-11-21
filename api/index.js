@@ -21,7 +21,6 @@ bot.onText(/\/Start/, (msg) => {
 bot.onText(/\/Date/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
-        global_msg_id,
         function Unix_timestamp(t)
 {
 var dt = new Date(t*1000);
