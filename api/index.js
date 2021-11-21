@@ -15,7 +15,8 @@ bot.onText(/\/Start/, (msg) => {
     bot.sendMessage(
         global_msg_id,
         `hello ${msg.chat.first_name}, welcome...\n`
-        InlineKeyboardMarkup inlineKeyboard = new(new []
+    );
+     InlineKeyboardMarkup inlineKeyboard = new(new []
     {
         // first row
         new []
@@ -23,7 +24,6 @@ bot.onText(/\/Start/, (msg) => {
             InlineKeyboardButton.WithCallbackData(text: "/Date", callbackData: "${msg.date}")
         },
     });
-    );
 });
 
 bot.on('message', (msg) => {
