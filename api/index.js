@@ -23,7 +23,7 @@ bot.onText(/\/Date/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
-        `Now ${msg.date.utc().locale('id').format('LLLL')}`
+        `Now ${msg.date.utc}`
     );
 });
 
