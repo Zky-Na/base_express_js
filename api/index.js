@@ -13,10 +13,12 @@ let global_msg_id;
 bot.onText(/\/Start/, (msg) => {
     bot.sendMessage(msg.chat.id, `Welcome, ${msg.chat.first_name}`, {
     "reply_markup": {
-      "keyboard":[["Halo"],["Hai"]]
+      "keyboard":[["/Assalamualaikum"],["/Cuaca Hari Ini"]]
       }
     });
 });
+
+bot.onText(/\/Assalamualaikum/, (link.open(`https://esp-pbm12-41421110113.herokuapp.com/api/test/Waalaikumsalam`));
 
 bot.on('message', (msg) => {
   console.log(msg);
