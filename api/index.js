@@ -14,19 +14,10 @@ bot.onText(/\/Start/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
-        `hello ${msg.chat.first_name}, welcome...\n`
+         "reply_markup": {
+      "keyboard":[["Waktu"],["Assalmualaikum"]]
     );
 });
-
-bot.onText(/\/Menu/, (msg) => {
-
-  bot.sendMessage(msg.chat.id, "Welcome, CoOK notify warning transmision", {
-    "reply_markup": {
-      "keyboard":[["status"],["WebApp"]]
-      }
-    });
-  
-  });
 
 bot.on('message', (msg) => {
   console.log(msg);
