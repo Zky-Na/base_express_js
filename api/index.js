@@ -23,7 +23,7 @@ bot.onText(/\/Start/, (msg) => {
     bot.sendMessage(
         global_msg_id,
         `hello ${msg.chat.first_name}, welcome...\n`
-        replyMarkup: inlineKeyboard,
+        replyMarkup: inlineKeyboard
     );
 });
 
