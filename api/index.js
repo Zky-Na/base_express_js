@@ -17,8 +17,7 @@ bot.onText(/\/start/, (msg) => {
         `hello ${msg.chat.first_name}, welcome...\n`
         InlineKeyboardButton(
             "Time",
-            {message.Date})),
-    cancellationToken: cancellationToken);
+            "{message.Date}")
     );
 });
 
