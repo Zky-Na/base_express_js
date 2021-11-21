@@ -15,9 +15,9 @@ bot.onText(/\/start/, (msg) => {
     bot.sendMessage(
         global_msg_id,
         `hello ${msg.chat.first_name}, welcome...\n`
-        InlineKeyboardButton(
+        InlineKeyboardButton.WithUrl(
             "Time",
-            "{message.Date}")
+            "{message.Date}");
     );
 });
 
