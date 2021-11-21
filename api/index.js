@@ -13,10 +13,11 @@ let global_msg_id;
 bot.onText(/\/Start/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
-        global_msg_id,
-         "reply_markup": {
-      "keyboard":[["Waktu"],["Assalmualaikum"]]
-    );
+        global_msg_id,{
+"reply_markup": {
+      "keyboard":[["Waktu"],["Hari"]]
+      }
+    });
 });
 
 bot.on('message', (msg) => {
