@@ -13,7 +13,7 @@ let global_msg_id;
 bot.onText(/\/Start/, (msg) => {
     bot.sendMessage(msg.chat.id, `Welcome, ${msg.chat.first_name}`, {
     "reply_markup": {
-      "keyboard":[["/Assalamualaikum"],["/Cuaca"]]
+      "keyboard":[["/Assalamualaikum"],["/Bagaimana_Kabar_Cuaca"]]
       }
     });
 });
@@ -26,7 +26,7 @@ bot.onText(/\/Assalamualaikum/, (msg) => {
         );
 });
 
-bot.onText(/\/Cuaca/, (msg) => {
+bot.onText(/\/Bagaimana_Kabar_Cuaca/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
