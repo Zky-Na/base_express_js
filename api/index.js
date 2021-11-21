@@ -9,8 +9,18 @@ const bot = new TelegramBot(token, {polling: true});
 
 
 let global_msg_id;
-// Main Menu Bot
 
+import datetime, time
+
+data = json.load('json_file_with_telegram_message.json')
+
+messageTime = data['message']['date'] # UNIX time
+messageTime = datetime.datetime.utcfromtimestamp(messageTime) # datetime format
+messageTime = messageTime.strftime('%Y-%m-%d %H:%M:%S') # formatted datetime
+    
+TimeStamp = str(messageTime)
+
+// Main Menu Bot
 bot.onText(/\/Start/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
@@ -23,7 +33,7 @@ bot.onText(/\/Date/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
-        `Now ${message.Date}`
+        `Now ${TimeStamp}`
     );
 });
 
