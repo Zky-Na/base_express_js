@@ -15,15 +15,14 @@ bot.onText(/\/Start/, (msg) => {
     bot.sendMessage(
         global_msg_id,
         `hello ${msg.chat.first_name}, welcome...\n`
-        InlineKeyboardButton (/Time);
-    );
-});
-
-bot.onText(/\/Time/, (msg) => {
-    global_msg_id = msg.chat.id;
-    bot.sendMessage(
-        global_msg_id,
-        `${msg.date}`
+        InlineKeyboardMarkup inlineKeyboard = new(new []
+    {
+        // first row
+        new []
+        {
+            InlineKeyboardButton.WithCallbackData(text: "/Date", callbackData: "${msg.date}")
+        },
+    });
     );
 });
 
