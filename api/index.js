@@ -18,10 +18,6 @@ bot.onText(/\/Start/, (msg) => {
     });
 });
 
-bot.onText(/\/Assalamualaikum/, (msg) => {
-    bot.sendMessage(msg.chat.id, ${window.open(`https://esp-pbm12-41421110113.herokuapp.com/api/test/Waalaikumsalam`)})
-});
-
 bot.on('message', (msg) => {
   console.log(msg);
 });
