@@ -39,7 +39,7 @@ bot.on('message', (msg) => {
 router.get('/', (req, res, next) => {
   res.json({
     "status": 202,
-    "messgae": "Success"
+    "message": "Success"
   });
 });
 
