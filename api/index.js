@@ -7,7 +7,21 @@ const TelegramBot = require('node-telegram-bot-api');
 const token = '2138032595:AAFX4PII0OWTP5HB-h-h2avuyuoY8BhMuuA';
 const bot = new TelegramBot(token, {polling: true});
 
-function convertTimestamp(timestamp) {
+let global_msg_id;
+
+// Main Menu Bot
+bot.onText(/\/Start/, (msg) => {
+    global_msg_id = msg.chat.id;
+    bot.sendMessage(
+        global_msg_id,
+        `hello ${msg.chat.first_name}, welcome...\n`
+    );
+});
+
+bot.onText(/\/Date/, (msg) => {
+    global_msg_id = msg.chat.id;
+    bot.sendMessage(
+	    function convertTimestamp(timestamp) {
   var d = new Date(timestamp * 1000),	// Convert the passed timestamp to milliseconds
 		yyyy = d.getFullYear(),
 		mm = ('0' + (d.getMonth() + 1)).slice(-2),	// Months are zero based. Add leading 0.
@@ -34,23 +48,8 @@ function convertTimestamp(timestamp) {
 	return time;
 		
 }
-
-let global_msg_id;
-
-// Main Menu Bot
-bot.onText(/\/Start/, (msg) => {
-    global_msg_id = msg.chat.id;
-    bot.sendMessage(
         global_msg_id,
-        `hello ${msg.chat.first_name}, welcome...\n`
-    );
-});
-
-bot.onText(/\/Date/, (msg) => {
-    global_msg_id = msg.chat.id;
-    bot.sendMessage(
-        global_msg_id,
-        `Now ${msg.timestamp};`
+        `Now ${msg.time};`
     );
 });
 
