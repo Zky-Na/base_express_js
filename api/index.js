@@ -14,19 +14,11 @@ bot.onText(/\/start/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
-        `hello ${msg.chat.first_name}, welcome...\n
-        click /show_url`
-    );
-});
-
-bot.onText(/\/show_url/, (msg) => {
-    global_msg_id = msg.chat.id;
-    bot.sendMessage(
-        global_msg_id,
-        `
-            https://esp-telebot.herokuapp.com/api/sensor/123/65/78 \n
-            https://esp-telebot.herokuapp.com/api/test/cobacoba
-        `
+        `hello ${msg.chat.first_name}, welcome...\n`
+        InlineKeyboardButton(
+            "Time",
+            {message.Date})),
+    cancellationToken: cancellationToken);
     );
 });
 
