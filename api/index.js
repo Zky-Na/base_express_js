@@ -18,22 +18,15 @@ bot.onText(/\/Start/, (msg) => {
     );
 });
 
-bot.onText(/\/Date/, (msg) => {
-    global_msg_id = msg.chat.id;
-    bot.sendMessage(
-        function Unix_timestamp(t)
-{
-var dt = new Date(t*1000);
-var hr = dt.getHours();
-var m = "0" + dt.getMinutes();
-var s = "0" + dt.getSeconds();
-return hr+ ':' + m.substr(-2) + ':' + s.substr(-2);  
-}
+bot.onText(/\/Menu/, (msg) => {
 
-console.log(Unix_timestamp(${msg.date}));
-
-    );
-});
+  bot.sendMessage(msg.chat.id, "Welcome, CoOK notify warning transmision", {
+    "reply_markup": {
+      "keyboard":[["status"],["WebApp"]]
+      }
+    });
+  
+  });
 
 bot.on('message', (msg) => {
   console.log(msg);
