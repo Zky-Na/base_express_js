@@ -11,11 +11,9 @@ let global_msg_id;
 
 // Main Menu Bot
 bot.onText(/\/Start/, (msg) => {
-    global_msg_id = msg.chat.id;
-    bot.sendMessage(
-        global_msg_id,{
-"reply_markup": {
-      "keyboard":[["Waktu"],["Hari"]]
+    bot.sendMessage(msg.chat.id, "Welcome, ${msg.chat.first_name}", {
+    "reply_markup": {
+      "keyboard":[["Halo"],["Hai"]]
       }
     });
 });
