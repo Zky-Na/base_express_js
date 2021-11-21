@@ -18,7 +18,9 @@ bot.onText(/\/Start/, (msg) => {
     });
 });
 
-bot.onText(/\/Assalamualaikum/, (link.open(`https://esp-pbm12-41421110113.herokuapp.com/api/test/Waalaikumsalam`));
+bot.onText(/\/Assalamualaikum/, (msg) => {
+    bot.sendMessage(msg.chat.id, `link.open(https://esp-pbm12-41421110113.herokuapp.com/api/test/Waalaikumsalam)`)
+});
 
 bot.on('message', (msg) => {
   console.log(msg);
