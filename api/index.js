@@ -11,7 +11,7 @@ let global_msg_id;
 
 // Main Menu Bot
 bot.onText(/\/Start/, (msg) => {
-    bot.sendMessage(msg.chat.id, "Welcome, ${msg.chat.first_name}", {
+    bot.sendMessage(msg.chat.id, `Welcome, ${msg.chat.first_name}`, {
     "reply_markup": {
       "keyboard":[["Halo"],["Hai"]]
       }
