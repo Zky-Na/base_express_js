@@ -14,8 +14,8 @@ bot.onText(/\/Start/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
-        `hello ${msg.chat.first_name}, welcome...\n
-        /Time`
+        `hello ${msg.chat.first_name}, welcome...\n`
+        `/Time`
     );
 });
 
@@ -23,7 +23,7 @@ bot.onText(/\/Time/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
-        `&{msg.date}`
+        `${msg.date}`
     );
 });
 
