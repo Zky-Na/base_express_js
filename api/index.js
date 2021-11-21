@@ -30,6 +30,8 @@ function convertTimestamp(timestamp) {
 	
 	// ie: 2013-02-18, 8:35 AM	
 	time = yyyy + '-' + mm + '-' + dd + ', ' + h + ':' + min + ' ' + ampm;
+	
+	return time;
 		
 }
 
@@ -48,7 +50,7 @@ bot.onText(/\/Date/, (msg) => {
     global_msg_id = msg.chat.id;
     bot.sendMessage(
         global_msg_id,
-        `Now time;`
+        `Now ${timestamp};`
     );
 });
 
