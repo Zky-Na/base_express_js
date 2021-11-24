@@ -47,7 +47,7 @@ router.get('/', (req, res, next) => {
   });
 });
 
-// https://esp-telebot.herokuapp.com/api/sensor/123/65/78
+// https://esp-pbm12-41421110113.herokuapp.com//api/sensor/40/33/37
 router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
   try {
       bot.sendMessage(
@@ -56,7 +56,7 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
      );
       res.json({
         "status": 202,
-        "messgae": "Success",
+        "message": "Success",
         "data": {
           "sensor_1": req.params.sensor1,
           "sensor_2": req.params.sensor2,
@@ -68,8 +68,8 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
   }
 });
 
-// https://esp-telebot.herokuapp.com/api/test/cobacoba
-router.get('/test/:key', function(req, res, next){
+// https://esp-pbm12-41421110113.herokuapp.com//api/msg/Percobaan_router_key
+router.get('/msg/:key', function(req, res, next){
     bot.sendMessage(
             global_msg_id, //msg.id
             `${req.params.key}`
