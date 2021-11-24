@@ -47,7 +47,7 @@ router.get('/', (req, res, next) => {
   });
 });
 
-// https://esp-pbm12-41421110113.herokuapp.com//api/sensor/40/33/37
+// https://esp-pbm12-41421110113.herokuapp.com/api/sensor/40/33/37
 router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
   try {
       bot.sendMessage(
@@ -68,7 +68,7 @@ router.get('/sensor/:sensor1/:sensor2/:sensor3', (req, res, next) => {
   }
 });
 
-// https://esp-pbm12-41421110113.herokuapp.com//api/msg/Percobaan_router_key
+// https://esp-pbm12-41421110113.herokuapp.com/api/msg/Percobaan_router_key
 router.get('/msg/:key', function(req, res, next){
     bot.sendMessage(
             global_msg_id, //msg.id
